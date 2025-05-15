@@ -79,8 +79,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.css" />
+    <Content Include="briefcase.svg" />
+    <Content Include="favicon.svg" />
     <Content Include="index.html" />
+    <Content Include="styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

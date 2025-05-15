@@ -1,15 +1,178 @@
-﻿<!DOCTYPE html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <title>TypeScript HTML App</title>
-    <link rel="stylesheet" href="app.css" type="text/css" />
-    <script src="app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Tech Consulting - Servicios de Consultoría Profesional </title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="briefcase.svg" type="image/svg+xml">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nombre = document.getElementById('nombre').value;
+                const email = document.getElementById('email').value;
+                const empresa = document.getElementById('empresa').value;
+                const mensaje = document.getElementById('mensaje').value;
+                
+                // Validación básica
+                if (nombre.trim() === '' || email.trim() === '' || mensaje.trim() === '') {
+                    alert('Por favor, complete todos los campos requeridos');
+                    return;
+                }
+                
+                // Simulación de envío
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Enviando...';
+                submitBtn.disabled = true;
+                
+                // Simulamos una llamada a API
+                setTimeout(function() {
+                    alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
+                    form.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>TypeScript HTML App</h1>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Process Tech <span>Consulting</span></div>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div id="content"></div>
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Soluciones de Consultoría a tu Medida</h1>
+            <p>Ayudamos a tu empresa a alcanzar su máximo potencial con servicios especializados de consultoría estratégica, tecnológica y de negocios.</p>
+            <a href="#contacto" class="btn">Solicita una Consulta</a>
+        </div>
+    </section>
+
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Ofrecemos soluciones integrales adaptadas a las necesidades específicas de cada cliente</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Consultoría Estratégica">
+                    <div class="service-content">
+                        <h3>Consultoría Estratégica</h3>
+                        <p>Desarrollamos planes estratégicos personalizados para ayudar a tu empresa a definir objetivos claros y alcanzables, identificar oportunidades de mercado y superar desafíos competitivos.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Transformación Digital">
+                    <div class="service-content">
+                        <h3>Transformación Digital</h3>
+                        <p>Acompañamos a tu organización en su proceso de transformación digital, implementando soluciones tecnológicas que optimicen procesos y mejoren la experiencia del cliente.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gestión de Proyectos">
+                    <div class="service-content">
+                        <h3>Gestión de Proyectos</h3>
+                        <p>Maximizamos la eficiencia y eficacia de tus proyectos utilizando metodologías ágiles y tradicionales, asegurando que se cumplan los objetivos en tiempo y presupuesto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nuestro Equipo">
+                </div>
+                <div class="about-text">
+                    <h2>Sobre Nosotros</h2>
+                    <p>Process Tech Consulting es una firma de consultoría con profesionales con más de 10 años de experiencia ayudando a empresas de todos los tamaños a transformar sus desafíos en oportunidades de crecimiento.</p>
+                    <p>Nuestro equipo está formado por profesionales altamente cualificados con amplia experiencia en diferentes sectores y áreas de especialización, lo que nos permite ofrecer soluciones verdaderamente integrales.</p>
+                    <p>Trabajamos con un enfoque colaborativo, estableciendo relaciones duraderas con nuestros clientes basadas en la confianza, la transparencia y los resultados medibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para ayudarte. Cuéntanos sobre tu proyecto o consulta y nos pondremos en contacto contigo a la brevedad.</p>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Process Tech Consulting</h3>
+                    <p>Soluciones de consultoría profesional para impulsar el crecimiento y éxito de tu empresa.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Email: processt@processtechexperts.cl</li>
+                        <li>Teléfono: +56 961 217 871</li>
+                        <li>Dirección: San Pedro de la Paz, Concepción, Chile</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ProcessTech. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
