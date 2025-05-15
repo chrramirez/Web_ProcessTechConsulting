@@ -82,6 +82,7 @@
     <Content Include="briefcase.svg" />
     <Content Include="CNAME.txt" />
     <Content Include="favicon.svg" />
+    <Content Include="gear_cogwheel_arrows_circular_process_icon_265392.ico" />
     <Content Include="index.html" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
@@ -98,6 +99,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gear_cogwheel_arrows_circular_process_icon_265392.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
