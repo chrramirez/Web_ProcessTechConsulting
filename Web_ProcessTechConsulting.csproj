@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="briefcase.svg" />
+    <Content Include="CNAME.txt" />
     <Content Include="favicon.svg" />
     <Content Include="index.html" />
     <Content Include="styles.css" />
