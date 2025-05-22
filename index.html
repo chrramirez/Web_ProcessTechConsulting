@@ -25,6 +25,26 @@
                     alert('Por favor, complete todos los campos requeridos');
                     return;
                 }
+
+                //Prueba de Formulario Free
+                <form id="contactForm" action="https://formspree.io/f/xanozdna" method="POST">
+
+                <!-- modify this form HTML and place wherever you want your form -->
+                <form
+                  action="https://formspree.io/f/xanozdna"
+                  method="POST"
+                >
+                  <label>
+                    Your email:
+                    <input type="email" name="email">
+                  </label>
+                  <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                  </label>
+                  <!-- your other form fields go here -->
+                  <button type="submit">Send</button>
+                </form>
                 
                 // Simulación de envío
                 const submitBtn = form.querySelector('button[type="submit"]');
